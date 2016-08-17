@@ -1,0 +1,23 @@
+{
+  "name": "snykwire",
+  "version": "1.0.0",
+  "description": "",
+  "main": "snykwire.js",
+  "scripts": {
+    "test": "nyc ava -v"
+  },
+  "author": "",
+  "license": "mit",
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "nyc": "^8.1.0"
+  },
+  "nyc": {
+    "exclude": [
+      "node_modules/",
+      "fixtures/",
+      "test.js"
+    ]
+  }
+}

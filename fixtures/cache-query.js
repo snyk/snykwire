@@ -1,0 +1,1 @@
+'fs' in require.cache;
