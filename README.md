@@ -3,7 +3,7 @@ layout: post
 title: Using ES2015 Proxy for fun and profit
 author: alon-niv
 by: Alon Niv
-main-image: https://res.cloudinary.com/snyk/image/upload/f_auto,q_auto,w_auto/v1448374341/BuiltWith-SSL-Usage.png
+main-image: https://upload.wikimedia.org/wikipedia/commons/f/f1/Straining_a_cocktail.jpg
 excerpt: "Much has been written about ES2015 - with its arrow functions, scoped variable declarations and controversial classes. However, a certain feature has received little love so far: the Proxy."
 ---
 
