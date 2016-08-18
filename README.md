@@ -1,4 +1,12 @@
-# ES2015 Proxies and you
+---
+layout: post		
+title: Using ES2015 Proxy for fun and profit
+author: alon-niv
+by: Alon Niv
+main-image: https://res.cloudinary.com/snyk/image/upload/f_auto,q_auto,w_auto/v1448374341/BuiltWith-SSL-Usage.png
+excerpt: "Much has been written about ES2015 - with its arrow functions, scoped variable declarations and controversial classes. However, a certain feature has received little love so far: the Proxy."
+---
+
 
 [Much](https://themeteorchef.com/blog/what-is-es2015/) [has](https://css-tricks.com/lets-learn-es2015/) [been written](https://babeljs.io/docs/learn-es2015/) [about ES2015](http://es6-features.org/) - with its arrow functions, scoped variable declarations and controversial classes.
 
