@@ -21,15 +21,15 @@ We want to create a package that allows a developer to safely `require` modules,
 don't `require` something better left alone.
 
 ### Enter the `module` module
-I'm only including this part because while node's [docs](https://nodejs.org/api/modules.html) do a pretty great job on explaining this, we're about to do some nifty things to the modules cache, and I want to explain the `require` flow in a few points because of that:
+I'm only including this part because, while node's [docs](https://nodejs.org/api/modules.html) do a pretty great job on explaining this, we're about to do some nifty things to the modules cache, so I want to make sure the `require` flow is clear:
 
 - Module `x` `require`s module `y`
 - Name `y` is resolved to an absolute path (or not, if it's a core module, such as `fs`)
-- The resolved name is fetched from the cache, with checking for its existence
+- The resolved name is fetched from the cache, *without* checking for its existence
 - If the fetched value is defined (a Module object), the exported values are returned
 - Otherwise, ~~some magic happens~~ node actually fetches the file from the FS, and compiles it into a Module object, which is put into the cache, and has its exported values returned.
 
-This cache is a global singleton, accessible via `require('module')._cache`, and is a plain JS Object.
+This cache is a global singleton, accessible via `require('module')._cache` and `require.cache`, and is a plain JS Object.
 
 ### Finally, some code
 For simplicity's sake, let's assume we just want to provide a blacklisting interface for modules that shouldn't be used by our required module. It's going to look like this:
