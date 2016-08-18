@@ -14,6 +14,10 @@ However, a certain feature has received little love so far: the `Proxy`.
 When I first transferred from Primarily Python to Primarily NodeJS, I felt the lack of `__magic__` keenly. Some of that has been relieved by ES5's `defineProperty`, but that was mostly syntactic sugar anyway.
 What we mostly lacked was a trapping mechanism for various object interactions. I feel like the [Proxy](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy) solves this problem, while keeping the feel of the JS we know and love (i.e. no `[Symbol.__setattr__]` methods for our objects).
 
+The `Proxy` constructor accepts 2 parameters:
+- `target`: this is the Object we want to proxy around
+- `handler`: this is an Object containing the spec for the traps we want to handle (a trap, in this sense, is a function that is being called on certain events happening to the proxy, such as a property being accessed, set or deleted) - examples follow.
+
 In this post, I'll try to give an example usage for the most common traps (`get`, `set`, `has` and `deleteProperty`), and in keeping with the Snyk spirit, it's going to be about dependencies.
 
 ### Our goal
