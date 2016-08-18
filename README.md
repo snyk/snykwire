@@ -36,7 +36,7 @@ For simplicity's sake, let's assume we just want to provide a blacklisting inter
 
 ```js
 const snykwire = require('snykwire'); // our code here, patent pending ;)
-const nefarious = snykwire('nefarious', ['fs', 'net']); // don't allow this module access the neither 'fs' nor 'net' core modules
+const nefarious = snykwire('nefarious', ['fs', 'net']); // don't allow this module access either 'fs' nor 'net' core modules
 ```
 
 Okay, so now we have a feel for what it's going to look like, let's start coding:
