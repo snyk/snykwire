@@ -16,7 +16,7 @@ As JS developers, we're not used to rely on trapping mechanisms throughout out c
 - The `Observer` and `Visitor` design patterns
 - Abstractions over complicated concepts
 
-However, until now, the language hasn't provided us with any way such mechanism.
+Until now, the language hasn't provided us with any way such mechanism.
 I feel like the [Proxy](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy) solves this problem, while keeping the feel of the JS we know and love (i.e. no `[Symbol.__setattr__]` methods for our objects).
 
 The `Proxy` constructor accepts 2 parameters:
