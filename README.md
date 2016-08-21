@@ -12,6 +12,7 @@ excerpt: "Much has been written about ES2015 - with its arrow functions, scoped 
 
 However, a certain feature has received little love so far: the `Proxy`.
 As JS developers, we're not used to rely on trapping mechanisms throughout out codebase, but they have several very useful applications. To name a few:
+
 - Testing, mocking and monkeypatching
 - The `Observer` and `Visitor` design patterns
 - Abstractions over complicated concepts
@@ -20,6 +21,7 @@ Until now, the language hasn't provided us with any way such mechanism.
 I feel like the [Proxy](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy) solves this problem, while keeping the feel of the JS we know and love (i.e. no `[Symbol.__setattr__]` methods for our objects).
 
 The `Proxy` constructor accepts 2 parameters:
+
 - `target`: this is the Object we want to proxy around
 - `handler`: this is an Object containing the spec for the traps we want to handle (a trap, in this sense, is a function that is being called on certain events happening to the proxy, such as a property being accessed, set or deleted) - examples follow.
 
@@ -113,7 +115,7 @@ require.cache.fs = {
 ```
 
 *Side-note about `require.cache`:* if you want to corrupt a single module in the module cache, use `require.cache`.
-If, however, you want to switch out the entire caching mechanism, use `require('Module')._cache`.
+If, however, you want to switch out the entire caching mechanism, use `require('module')._cache = ...`.
 
 Let's fix our code to handle this situation:
 
