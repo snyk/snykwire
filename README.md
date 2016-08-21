@@ -11,8 +11,13 @@ excerpt: "Much has been written about ES2015 - with its arrow functions, scoped 
 [Much](https://themeteorchef.com/blog/what-is-es2015/) [has](https://css-tricks.com/lets-learn-es2015/) [been written](https://babeljs.io/docs/learn-es2015/) [about ES2015](http://es6-features.org/) - with its arrow functions, scoped variable declarations and controversial classes.
 
 However, a certain feature has received little love so far: the `Proxy`.
-When I first transferred from Primarily Python to Primarily NodeJS, I felt the lack of `__magic__` keenly. Some of that has been relieved by ES5's `defineProperty`, but that was mostly syntactic sugar anyway.
-What we mostly lacked was a trapping mechanism for various object interactions. I feel like the [Proxy](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy) solves this problem, while keeping the feel of the JS we know and love (i.e. no `[Symbol.__setattr__]` methods for our objects).
+As JS developers, we're not used to rely on trapping mechanisms throughout out codebase, but they have several very useful applications. To name a few:
+- Testing, mocking and monkeypatching
+- The `Observer` and `Visitor` design patterns
+- Abstractions over complicated concepts
+
+However, until now, the language hasn't provided us with any way such mechanism.
+I feel like the [Proxy](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Proxy) solves this problem, while keeping the feel of the JS we know and love (i.e. no `[Symbol.__setattr__]` methods for our objects).
 
 The `Proxy` constructor accepts 2 parameters:
 - `target`: this is the Object we want to proxy around
